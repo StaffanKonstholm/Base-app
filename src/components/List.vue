@@ -11,7 +11,6 @@ function doThing (){
     inputValue = ref("")
 }
 let inputValue = ref("")
-const test = "hey hey people";
 </script>
 
 <template>

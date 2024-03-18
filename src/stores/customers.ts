@@ -69,6 +69,13 @@ export const useCustomers = defineStore('customers', {
         resolve();
       })
     },
+    async removeCustomer(user: Customer): Promise <void> {
+      const promise: Promise<void> = new Promise((resolve) => {
+        
+        this.$state.customers.splice(this.$state.customers.indexOf(user), 1)
+        resolve();
+      })
+    },
   },
 })
 

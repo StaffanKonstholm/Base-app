@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { useCustomers } from '../stores/customers'
 import { storeToRefs } from 'pinia'
+import User from './User.vue'
 
 const customerStore = useCustomers()
 const {customers, isRequestLoading, activeCustomersCount, getCustomerById} = storeToRefs(customerStore)
@@ -10,6 +11,7 @@ function doThing (){
     inputValue = ref("")
 }
 let inputValue = ref("")
+const test = "hey hey people";
 </script>
 
 <template>
@@ -20,8 +22,10 @@ let inputValue = ref("")
     <!--you get ugly list-dots without the list-group class -->
     <li class= "list-group" v-for="customer in customers">
         <div v-if="customer.isActive">
-            {{customer.fullName }}
+            <User :customerProp="customer"/>
+
         </div>
+
     </li>
     <br>
     <div class="form-group">

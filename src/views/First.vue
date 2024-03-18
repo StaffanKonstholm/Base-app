@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Reactivity from '../components/Reactivity.vue';
+import List from '../components/List.vue';
 
 </script>
 
 <template>
   <main>
-    <Reactivity />
+    <List />
   </main>
 </template>

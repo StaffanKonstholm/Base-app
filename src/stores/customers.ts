@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 // https://runthatline.com/pinia-typescript-type-state-actions-getters/
-type Customer = {
+export type Customer = {
   id: string
   fullName: string
   isActive: boolean
@@ -27,6 +27,19 @@ export const useCustomers = defineStore('customers', {
         isActive: true,
         totalSpending: 2000,
       },
+      {
+        id: '3',
+        fullName: 'Joe Johnson',
+        isActive: true,
+        totalSpending: 3000,
+      },
+      {
+        id: '4',
+        fullName: 'Jane Johnson',
+        isActive: true,
+        totalSpending: 4000,
+      },
+
     ],
     isRequestLoading: false,
   }),

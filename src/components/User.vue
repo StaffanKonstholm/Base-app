@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useCustomers } from '../stores/customers'
-import {type Customer} from '../stores/customers'
-const customerStore = useCustomers();
+import { useCustomers, type Customer } from '../stores/customers'
+import { type PropType } from 'vue';
 
+const customerStore = useCustomers();
 const props = defineProps({
   customerProp: {
-    type: Object,
+    type: Object as PropType<Customer>,
     required: true
     },
   optionalProp: {
-    type: Object,
+    type: Object as PropType<Customer>,
     required: false
   }
 })
